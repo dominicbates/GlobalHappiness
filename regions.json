@@ -1,0 +1,117 @@
+[
+  {
+    "region": "British Isles",
+    "countries": ["United Kingdom", "Ireland"],
+    "civilizations": ["Roman Britain", "Anglo-Saxon Kingdoms", "Norman England", "British Empire"]
+  },
+  {
+    "region": "Western Europe",
+    "countries": ["France", "Germany", "Belgium", "Netherlands", "Luxembourg", "Switzerland", "Austria"],
+    "civilizations": ["Frankish Empire", "Holy Roman Empire", "Napoleonic France", "Protestant Reformation"]
+  },
+  {
+    "region": "Southern Europe & Mediterranean",
+    "countries": ["Italy", "Spain", "Portugal", "Greece", "Malta", "Andorra", "San Marino", "Vatican City"],
+    "civilizations": ["Roman Empire", "Byzantine Empire", "Moorish Iberia", "Renaissance Italy"]
+  },
+  {
+    "region": "Northern Europe & Scandinavia",
+    "countries": ["Norway", "Sweden", "Denmark", "Finland", "Iceland"],
+    "civilizations": ["Viking Age", "Kalmar Union", "Lutheran Reformation"]
+  },
+  {
+    "region": "Eastern Europe & the Balkans",
+    "countries": ["Poland", "Hungary", "Czechia", "Slovakia", "Slovenia", "Croatia", "Serbia", "Bosnia and Herzegovina", "Montenegro", "North Macedonia", "Albania", "Kosovo", "Romania", "Bulgaria", "Estonia", "Latvia", "Lithuania"],
+    "civilizations": ["Slavic Kingdoms", "Ottoman Empire", "Austro-Hungarian Empire", "Byzantine Empire"]
+  },
+  {
+    "region": "Russia & the Eurasian Steppe",
+    "countries": ["Russia", "Ukraine", "Belarus", "Moldova"],
+    "civilizations": ["Kievan Rus", "Mongol Empire", "Tsardom of Russia", "Soviet Union"]
+  },
+  {
+    "region": "Anatolia & the Caucasus",
+    "countries": ["Turkey", "Armenia", "Georgia", "Azerbaijan", "Cyprus"],
+    "civilizations": ["Byzantine Empire", "Ottoman Empire", "Urartu", "Armenian Kingdoms"]
+  },
+  {
+    "region": "Middle East & the Levant",
+    "countries": ["Israel", "Palestine", "Lebanon", "Syria", "Jordan", "Iraq"],
+    "civilizations": ["Ancient Israel", "Babylonia", "Assyria", "Umayyad Caliphate", "Crusader States"]
+  },
+  {
+    "region": "Arabian Peninsula",
+    "countries": ["Saudi Arabia", "United Arab Emirates", "Qatar", "Oman", "Yemen", "Bahrain", "Kuwait"],
+    "civilizations": ["Nabataean Kingdom", "Birthplace of Islam", "Rashidun Caliphate", "Tribal Federations"]
+  },
+  {
+    "region": "Persia & Greater Iran",
+    "countries": ["Iran", "Afghanistan"],
+    "civilizations": ["Achaemenid Empire", "Sassanid Empire", "Safavid Empire", "Zoroastrian Civilization"]
+  },
+  {
+    "region": "South Asia",
+    "countries": ["India", "Pakistan", "Bangladesh", "Sri Lanka", "Nepal", "Bhutan", "Maldives"],
+    "civilizations": ["Maurya Empire", "Gupta Empire", "Mughal Empire", "British Raj"]
+  },
+  {
+    "region": "Southeast Asia",
+    "countries": ["Vietnam", "Thailand", "Indonesia", "Philippines", "Malaysia", "Myanmar", "Cambodia", "Laos", "Brunei", "Timor-Leste", "Singapore"],
+    "civilizations": ["Khmer Empire", "Srivijaya", "Majapahit", "Colonial Empires (Dutch, French, Spanish)"]
+  },
+  {
+    "region": "East Asia",
+    "countries": ["China", "Japan", "South Korea", "North Korea", "Taiwan", "Mongolia"],
+    "civilizations": ["Imperial China", "Yamato Japan", "Goguryeo", "Tang Dynasty", "Qing Dynasty"]
+  },
+  {
+    "region": "Central Asia",
+    "countries": ["Kazakhstan", "Uzbekistan", "Turkmenistan", "Kyrgyzstan", "Tajikistan"],
+    "civilizations": ["Sogdiana", "Timurid Empire", "Silk Road Cities", "Mongol Khanates"]
+  },
+  {
+    "region": "North Africa",
+    "countries": ["Egypt", "Libya", "Tunisia", "Algeria", "Morocco", "Western Sahara"],
+    "civilizations": ["Ancient Egypt", "Carthaginian Empire", "Roman Africa", "Arab Conquests"]
+  },
+  {
+    "region": "West Africa",
+    "countries": ["Nigeria", "Ghana", "Senegal", "Mali", "Niger", "Burkina Faso", "Ivory Coast", "Togo", "Benin", "Gambia", "Guinea", "Sierra Leone", "Liberia", "Mauritania", "Guinea-Bissau"],
+    "civilizations": ["Mali Empire", "Songhai Empire", "Kingdom of Ghana", "Atlantic Slave Trade"]
+  },
+  {
+    "region": "Central Africa",
+    "countries": ["Democratic Republic of the Congo", "Republic of the Congo", "Central African Republic", "Cameroon", "Gabon", "Equatorial Guinea", "Chad"],
+    "civilizations": ["Kongo Kingdom", "Bantu Migrations", "Belgian Colonialism"]
+  },
+  {
+    "region": "East Africa & the Horn",
+    "countries": ["Ethiopia", "Eritrea", "Somalia", "Somaliland", "Djibouti", "Kenya", "Tanzania", "Uganda", "Rwanda", "Burundi", "Sudan", "South Sudan"],
+    "civilizations": ["Axumite Empire", "Swahili Coast", "Zanzibar Sultanate", "Christian Ethiopia"]
+  },
+  {
+    "region": "Southern Africa",
+    "countries": ["South Africa", "Zimbabwe", "Zambia", "Namibia", "Botswana", "Lesotho", "Eswatini", "Mozambique", "Malawi", "Angola", "Madagascar"],
+    "civilizations": ["Great Zimbabwe", "Zulu Kingdom", "Boer Republics", "British Colonization"]
+  },
+  {
+    "region": "North America",
+    "countries": ["United States", "Canada"],
+    "civilizations": ["Indigenous Nations", "European Colonization", "British and French Empires", "Modern Superpowers"]
+  },
+  {
+    "region": "Mesoamerica & the Caribbean",
+    "countries": ["Mexico", "Guatemala", "Belize", "Honduras", "El Salvador", "Nicaragua", "Costa Rica", "Panama", "Cuba", "Haiti", "Dominican Republic", "Jamaica", "Puerto Rico", "Bahamas", "Caribbean islands"],
+    "civilizations": ["Maya", "Aztec", "Spanish Colonization", "Caribbean Plantation Economies"]
+  },
+  {
+    "region": "South America",
+    "countries": ["Brazil", "Argentina", "Chile", "Peru", "Colombia", "Venezuela", "Ecuador", "Bolivia", "Paraguay", "Uruguay", "Suriname", "Guyana", "French Guiana"],
+    "civilizations": ["Inca Empire", "Tupi-Guarani", "Spanish and Portuguese Colonization", "Liberation Movements"]
+  },
+  {
+    "region": "Oceania & Pacific Islands",
+    "countries": ["Australia", "New Zealand", "Papua New Guinea", "Fiji", "Samoa", "Tonga", "Solomon Islands", "Micronesia", "Palau", "Vanuatu", "Kiribati", "Marshall Islands", "Tuvalu", "Nauru"],
+    "civilizations": ["Aboriginal Australians", "Polynesian Navigation", "Māori", "European Colonization", "WWII Pacific Theater"]
+  }
+]
