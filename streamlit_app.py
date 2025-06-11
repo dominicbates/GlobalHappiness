@@ -9,7 +9,8 @@ import json
 @st.cache_data
 def load_data():
     # Replace this with your actual CSV file path
-    df = pd.read_csv("data/combined_v0.1/stats.csv")
+    # df = pd.read_csv("data/combined_v0.1/stats.csv")
+    df = pd.read_csv("data/stats_v0.1.csv")
     return df
 df = load_data()
 
