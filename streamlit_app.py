@@ -11,6 +11,7 @@ def load_data():
     # Replace this with your actual CSV file path
     # df = pd.read_csv("data/combined_v0.1/stats.csv")
     df = pd.read_csv("data/stats_v0.1.csv")
+    df = df[df['metric'] != 'Subset: Population']
     return df
 df = load_data()
 
@@ -29,13 +30,36 @@ mapping = {'Gambia':'The Gambia',
            'Brunei':'Brunei Darussalam',
            'Czechia':'Czech Republic'}
 
-
+def clean_dates(date_1):
+    '''
+    Returns human-readable date range (CE, BCE...)
+    '''
+    clean = ''
+    if date_1<0:
+        clean = str(date_1).replace('-','') + ' - '+str(date_1+100).replace('-','') +' BCE'
+    elif date_1 == 2000:
+        clean = str(date_1).replace('-','') + ' - 2025 CE'
+    else:
+        clean = str(date_1).replace('-','') + ' - '+str(date_1+100).replace('-','') +' CE'
+    return clean
+    
 
 # ---- App Title and Description ----
-st.title("Global Happiness Over Time")
+# st.title("Global Happiness Over Time")
+st.title("Historical Happiness")
+
+
 st.markdown("""
-This app lets you explore global happiness as a function of time. Happiness is calculated in several categories, and then averaged to compute "overall" happiness. Values have been estimated by an expert historian (role-played by gpt-4.5-mini) for each region and time. The model was sampled from ~20 times and averaged to compute mean values and confidence intervals. It was prompted to include explanations, so values should encorporate historical context (at least as much as the LLM understands these factors). I may add these at a later date. 
+This app lets you explore global happiness (i.e. quality of life) over time around the world as estimated by gpt-4.5-mini. You can select specific regions, times, and categories using the drop down menus and sliders.
 """)
+
+# ---- Toggle for More Info ----
+if st.toggle("Show full explanation"):
+    st.markdown("""
+    Quality of life for all regions and time periods has been estimated by an expert historian (gpt-4.5-mini) in a number of different categories: peace, health & wellbieng, freedom, equality, economic opportunity, culture and lesure, and overall (which is an average across all categories). The model was prompted to make use of historical context, and provide an explanation for each period and region. This process was repeated 20 times to extract confidence intervals (1 sigma).
+
+    The idea of this project is to create a dataset were you are able to explore relative hapiness of different regions at different points in time, along with seeing the (qualitative) impact of things like plagues, wars, policies etc. I may add the models explanations to the plot at some point so you can see what was happening in the world at each time. Feel free to play around and use as you like!  
+    """)
 
 # ---- Economic Category Selection ----
 metrics_list = df['metric'].unique()  # or a static list like ['GDP', 'Population', ...]
@@ -97,7 +121,7 @@ with left_col:
                vmax = df['mean'][df['metric'] == selected_metric].max())
     ax.set_xlim(-170, 180)
     ax.set_ylim(-58, 85) 
-    ax.set_title(f"Year: {selected_year}")
+    ax.set_title(f"Year: {clean_dates(selected_year)}",fontsize=12)
     ax.set_axis_off()
     st.pyplot(fig)
     
@@ -115,7 +139,7 @@ with right_col:
         
     # Placeholder for country plot
     fig2, ax2 = plt.subplots(figsize=(4.5,2.2))
-    ax2.set_title(f"{selected_region}")
+    ax2.set_title(f"{selected_region}",fontsize=13)
     
     m_time_series = (df['region'] == selected_region) & (df['metric'] == selected_metric)
     plt.plot(df[m_time_series]['dates_start'], df[m_time_series]['mean'], color='C0')
