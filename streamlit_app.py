@@ -127,5 +127,5 @@ with right_col:
                      df[m_time_series]['err_pos'].max(),
                      alpha=0.1, color='k')
     plt.xlabel('Year')
-    plt.ylabel(f'{selected_metric.replace('Subset: ','')}')
+    plt.ylabel(f"{selected_metric.replace('Subset: ', '')}")
     st.pyplot(fig2)
