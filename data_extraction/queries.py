@@ -22,6 +22,37 @@ def query_model(client, prompt: str):
 
 
 
+# def build_prompt(region: str, extra: str = '') -> str:
+#     '''
+#     Prompt to extract csv for a specific region
+#     '''
+#     return f"""
+# You are a historical data analyst who is an expert on {region}{extra}.
+
+# For this region, you will be estimating how several different quality of life factors vary across time.
+
+# Years you will provide data for: -1000 to 2025 in intervals of 100 years (-1000 to -900, -900 to -800, ..., 2000 to 2025)
+
+# For each period, please provide:
+# - A short one-sentence summary of what is happening in {region}
+# - The rough population of the region in this period (as a number, e.g. 2,300,000)
+# - A numeric score from 0 to 10 for each category based on the life of the average person in {region} over this period (0 being worst, 10 being best)
+
+# Return the data as a **CSV table** with the following columns (headers must be included):
+
+# Start Year,End Year,Population,Summary,Freedom,Health & Wellbeing,Economic Opportunity,Equality,Culture & Lesure,Peace
+
+# Some additional context on what each category represents:
+# - Freedom (e.g. freedom of speech, movement, ideas, democracy, slavery etc.)
+# - Health & Wellbeing (e.g. mortality, disease, access to food, cleanliness)
+# - Economic Opportunity (e.g. availability of jobs, education, economic prosperity, social mobility)
+# - Equality (e.g. disparity between rich and poor)
+# - Culture & Lesure (e.g. access to games, hobbies, cuisine, free time, and cultural expression)
+# - Peace (e.g. wars, invasions, unrest, or infighting) - where 10 is most peaceful
+
+# Only return the CSV table, no markdown, no JSON, no intro or outro text. Please encode / surround ALL values with quotation marks " and remember this is just for {region}
+# """
+
 def build_prompt(region: str, extra: str = '') -> str:
     '''
     Prompt to extract csv for a specific region
@@ -34,8 +65,9 @@ For this region, you will be estimating how several different quality of life fa
 Years you will provide data for: -1000 to 2025 in intervals of 100 years (-1000 to -900, -900 to -800, ..., 2000 to 2025)
 
 For each period, please provide:
-- A short one-sentence summary of what is happening in {region}
+- The start and end of the period (this should be 100 years e.g. -1000 to -900, except for 2000 to 2025)
 - The rough population of the region in this period (as a number, e.g. 2,300,000)
+- A short one-sentence summary of what is happening in {region}
 - A numeric score from 0 to 10 for each category based on the life of the average person in {region} over this period (0 being worst, 10 being best)
 
 Return the data as a **CSV table** with the following columns (headers must be included):
@@ -50,7 +82,7 @@ Some additional context on what each category represents:
 - Culture & Lesure (e.g. access to games, hobbies, cuisine, free time, and cultural expression)
 - Peace (e.g. wars, invasions, unrest, or infighting) - where 10 is most peaceful
 
-Only return the CSV table, no markdown, no JSON, no intro or outro text. Please encode / surround ALL values with quotation marks " and remember this is just for {region}
+Only return the CSV table, no markdown, no JSON, no intro or outro text. Please encode / surround ALL values with quotation marks ", remember this is just for {region}, and make sure you include all date ranges (31 rows total)
 """
 
 
