@@ -10,7 +10,7 @@ import json
 def load_data():
     # Replace this with your actual CSV file path
     # df = pd.read_csv("data/combined_v0.1/stats.csv")
-    df = pd.read_csv("data/stats_v1.csv")
+    df = pd.read_csv("data/stats_v1.1.csv")
     df = df[df['metric'] != 'Subset: Population']
     return df
 df = load_data()
